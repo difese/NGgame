@@ -11,21 +11,37 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans"
       rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="icon" href="favicon.ico" />
   </head>
-  <body>
+
+  <body class="body">
     <div class="container">
       <div class="row game-card align-items-center">
         <div class="col col-md-4 offset-md-4">
+          <div class="card conditions text-center">
+            Загадайте любое целое число (от -999 до 999), нажмите кнопку "Старт",
+            а я быстро его угадаю!&#129321;
+          </div>
+          <div class="card input-form text-center">
+            <label for="name">Минимальное значение числа</label>
+            <!-- input type="text" (a не type="number") - защита от ввода NaN в JS -->
+            <input type="text" class="input-field" placeholder="0" id="min" />
+            <label for="name">Максимальное значение числа</label>
+            <input type="text" class="input-field" placeholder="100" id="max" />
+          </div>
+          <div class="card text-center">
+            <button class="btn btn-danger btn-lg" id="btnStart">Старт</button>
+          </div>
           <div class="card text-center">
             <div class="card-header">
-              <p class="m-0">Вопрос №<span id="orderNumberField">5</span></p>
+              <p class="m-0">Вопрос №<span id="orderNumberField"></span></p>
             </div>
             <div class="card-body">
               <div class="row no-gutters">
                 <div class="col">
                   <h3 class="card-title m-0">
-                    <span id="answerField">Вы загадали число 5?</span>
+                    <span id="answerField"></span>
                   </h3>
                 </div>
               </div>
@@ -44,7 +60,9 @@
               </div>
             </div>
             <div class="card-footer">
-              <button class="btn btn-link" id="btnRetry">Заново</button>
+              <button class="btn btn-link btn-warning" id="btnRetry">
+                Заново
+              </button>
             </div>
           </div>
         </div>

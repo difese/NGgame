@@ -1,4 +1,25 @@
+.body {
+  font-family: 'Open Sans', monospace;
+  letter-spacing: .1rem;
+  background: url('nggame2.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.card {
+  border: 2px solid black;
+  background-color:lightslategrey;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.input-field {
+  background-color: darkgrey;
+  font-weight: 900;
+  color: blueviolet;
+  text-align: center;
+}
+
 .game-card {
   height: 100vh;
-  font-family: 'Open Sans', monospace;
 }
